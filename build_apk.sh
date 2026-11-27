@@ -9,7 +9,8 @@
 
 set -euo pipefail
 
-REPO="mbadrudin170-jpg/apk_scope"
+OWNER="$(gh api user --jq .login)"
+REPO="$OWNER/apk_scope"
 WORKFLOW_FILE="build-apk-dev.yml"
 REF="main"
 ARTIFACT="apk-development-arm64"   # samakan dengan 'name' di step upload-artifact
